@@ -1,4 +1,4 @@
-# Bank Customer Churn — ML Portfolio Project
+# Bank Customer Churn — ML Project
 
 Predict customer churn and identify the key drivers behind exit behavior in a European retail bank, using a 10,000-customer dataset.
 
