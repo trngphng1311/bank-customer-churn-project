@@ -59,9 +59,9 @@ bank-customer-churn-project/
 | 5. Modeling | Three models trained on the same split: Logistic Regression, Random Forest, XGBoost. Class imbalance handled via `class_weight='balanced'` / `scale_pos_weight`. |
 | 6. Evaluation | Accuracy, precision, recall, F1, ROC-AUC. Confusion matrices and ROC curves saved. Decision threshold tuned on the precision-recall curve. |
 | 7. Explainability | RF feature importance + SHAP global (bar / beeswarm) and per-customer (waterfall) plots. |
-| 8. Segmentation | KMeans clustering with business-named cohorts (planned). |
+| 8. Segmentation | KMeans clustering on behavioral features; clusters profiled and labeled with business names; per-customer scores joined with risk bands. |
 | 9. Business insights | Translate findings into retention recommendations (planned). |
-| 10. Dashboard | Tableau Public workbook (planned). |
+| 10. Dashboard | [Tableau Public dashboard](https://public.tableau.com/app/profile/nguyen.gwen/viz/Bank-Churn-Project/Summary) — KPI tiles, segment scatter, churn breakdowns by geography / age band / products / activity, risk band distribution, SHAP top drivers. |
 
 ---
 
@@ -131,7 +131,7 @@ Generated artifacts will appear under `outputs/figures/` and `outputs/models/`, 
 - **Explainability:** SHAP
 - **Plotting:** matplotlib, seaborn
 - **Notebook environment:** Jupyter
-- **Dashboard:** Tableau Public (planned)
+- **Dashboard:** [Tableau Public — Bank Churn Project](https://public.tableau.com/app/profile/nguyen.gwen/viz/Bank-Churn-Project/Summary)
 
 ---
 
@@ -145,9 +145,9 @@ Generated artifacts will appear under `outputs/figures/` and `outputs/models/`, 
 
 ## Roadmap
 
-- [ ] **Stage 8 — Customer segmentation** (KMeans on behavioral features, cluster profiling).
+- [x] **Stage 8 — Customer segmentation** (KMeans on behavioral features, cluster profiling).
+- [x] **Stage 10 — Tableau dashboard** — [live on Tableau Public](https://public.tableau.com/app/profile/nguyen.gwen/viz/Bank-Churn-Project/Summary).
 - [ ] **Stage 9 — Business insights writeup** (retention recommendations tied to drivers).
-- [ ] **Stage 10 — Tableau dashboard** (KPI tiles, churn-by-segment, SHAP-driven feature importance, risk-band scatter).
 - [ ] Refactor reusable code from notebooks into `src/` modules.
 - [ ] Add unit tests for the feature pipeline.
 
